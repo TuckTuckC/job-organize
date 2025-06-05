@@ -1,6 +1,6 @@
 # 🛠️ Project Notes: [Job-Organize]
 
-> A full organization solution for small businesses.
+> A full solution to organization for small businesses.
 
 ---
 
@@ -19,49 +19,54 @@
 
 - [ ] **Employee Clock In/Out**
   - Track time for active shifts
-  - Consider logging IP/device for security
+  - Option for companies to track location
+  - Timesheet Analasys
+
+- [ ] **Calander / Scheduling System**
+  - Will display items from Task List on that day
 
 - [ ] **PTO Requests**
   - Employees can request time off
   - Manual or admin-approved workflow TBD
+    
+## 🚧 TODOs
 
-- [ ] **Automated Billing (Optional)**
-  - Automatically send invoice or charge client when a job is marked complete
-  - Could integrate with Stripe, Square, or QuickBooks
-  - Needs logic to confirm completion
+- [ ] Decide on **project name**
+- [ ] Define minimum feature set for v1
+- [ ] Create mock UI wireframes
+- [ ] Set up database schema
+- [ ] Draft roles (admin, employee, manager, etc.)
 
-- [ ] **Job Data Storage**
-  - Keep records of:
-    - Job location
-    - Client info
-    - Date/time
-    - Assigned employee(s)
-    - Total hours
-
----
+## 🗃️ Database Structure
+- Users
+  - Personal Info
+  - Role
+- Companies
+  - Users (fk)
+  - Crews
+  - Job Locations
+    - Current Priority Task List
+    - Inventory List
+    - Notes
+    - Additional Files
+  - Clients
+  - Inventory List
 
 ## 💡 Future Ideas
 
-- [ ] **Automation Agent**
-  - Background system or bot to:
-    - Auto-generate invoices
-    - Send reminders/emails
+- **Automation**
+    - Automatic Billing
+    - Send reminders via push notifications
     - Schedule follow-ups
 
-- [ ] **Task Assignment System**
-  - Assign specific employees to jobs/tasks
-  - Status tracking (e.g., To Do, In Progress, Done)
-
-- [ ] **Reporting & Insights**
+- **Reporting & Insights**
   - Payroll summaries
   - Job completion stats
   - PTO analysis
 
-- [ ] **Mobile Accessibility**
+- **Mobile Accessibility**
   - Responsive interface
   - Consider push notifications or location-aware clocking
-
----
 
 ## 🧪 Experimental
 
@@ -70,33 +75,4 @@
 - Thoughts on **webhooks** for triggering automation?
 - Manual override for billing in case of client changes?
 - File uploads for job documentation (images, PDFs)?
-
----
-
-## 🚧 TODOs
-
-- [ ] Decide on **project name**
-- [ ] Define minimum feature set for v1
-- [ ] Create mock UI wireframes
-- [ ] Choose tech stack for front/back-end
-- [ ] Set up database schema
-- [ ] Draft roles (admin, employee, manager, etc.)
-
----
-
-## 🔗 Links
-
-- GitHub Repo: _[add link here]_
-- Shared Drive/Docs: _[optional]_
-
----
-
-## ✍️ Contributors
-
-- You
-- Your Partner
-
----
-
-**Note**: This file is tracked on GitHub and can be updated by either of us at any time.
 
