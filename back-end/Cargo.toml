@@ -1,0 +1,19 @@
+[package]
+name = "back-end"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = { path = "vendor/actix-web/actix-web" }
+sqlx = { version = "0.7", features = ["sqlite", "runtime-tokio-native-tls", "macros"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+
+[source.crates-io]
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "vendor"
+
+[toolchain]
+channel = "1.86.0"
+
