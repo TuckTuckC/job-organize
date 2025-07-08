@@ -3,6 +3,7 @@ module go-back-end
 go 1.24.3
 
 require (
+	github.com/golang-jwt/jwt/v5 v5.2.2
 	libraries/cors-master v0.0.0-00010101000000-000000000000
 	libraries/gin-1.10.1 v0.0.0-00010101000000-000000000000
 )
@@ -39,3 +40,7 @@ require (
 replace libraries/gin-1.10.1 => ./libraries/gin-1.10.1
 
 replace libraries/cors-master => ./libraries/cors-master
+
+replace github.com/golang-jwt/jwt/v5 => ./libraries/jwt
+
+replace github.com/gorilla/mux => ./libraries/mux
