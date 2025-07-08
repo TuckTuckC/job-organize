@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Viewer</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    pre, code {
+      background-color: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    h1, h2, h3 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3em;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">Loading markdown...</div>
+
+  <script>
+    fetch('notes.md')
+      .then(response => {
+        if (!response.ok) throw new Error("Failed to load markdown file");
+        return response.text();
+      })
+      .then(text => {
+        document.getElementById('content').innerHTML = marked.parse(text);
+      })
+      .catch(err => {
+        document.getElementById('content').innerText = "Error loading markdown: " + err.message;
+      });
+  </script>
+</body>
+</html>
+
