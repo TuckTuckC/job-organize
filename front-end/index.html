@@ -4,13 +4,28 @@
         <meta charset="UTF-8">
         <title>Job Organize</title>
     </head>
-    <body>
+    <body style="background-color: grey">
         <nav>
             <ul>
                 <h1>Job Organize</h1>
                 <button onclick="getUser()">Get User</button>
             </ul>
         </nav>
+
+        <h2>Add New User</h2>
+        <form id="userForm">
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="text" id="firstName" placeholder="First Name" required />
+            <input type="text" id="lastName" placeholder="Last Name" required />
+            <button type="submit">Add User</button>
+        </form>
+        <form id="timesheetForm">
+            <input type="number" id="userID" placeholder="User ID" required />
+            <input type="text" id="startDateTime" placeholder="Start Time: 13:45_08/25/2025" required />
+            <input type="number" id="hours" placeholder="Hours Worked: 7:30" required />
+            <button type="submit">Add Time Sheet Entry</button>
+        </form>
+
         <script src="./js/app.js"></script>
     </body>
 </html>

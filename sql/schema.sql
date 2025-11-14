@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS Users (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Email TEXT,
+    FirstName TEXT,
+    LastName TEXT
+);
+
+CREATE TABLE IF NOT EXISTS TimesheetEntrys (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    StartDateTime TEXT,
+    Hours REAL,
+    UserID INTEGER,
+    FOREIGN KEY (UserID) REFERENCES Users(ID)
+);
