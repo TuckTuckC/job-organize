@@ -1,0 +1,3 @@
+This is the text from data.txt
+Line 2 of data
+line 3 of data
